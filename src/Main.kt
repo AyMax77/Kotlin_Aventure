@@ -29,7 +29,7 @@ fun attaque(PV:Int,defense: Int,nom_attaquant: String,nom_cible: String,atktotal
         attak = 0
     }
     var hp = PV - attak
-    return "$nom_attaquant attaque $nom_cible pour $attak points de dégâts\n"
+    return "$nom_attaquant attaque $nom_cible pour $attak points de dégâts, il lui reste $hp PV\n"
 }
 
 
