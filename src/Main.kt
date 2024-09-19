@@ -33,9 +33,26 @@ fun attaque(PV:Int,defense: Int,nom_attaquant: String,nom_cible: String,atktotal
 }
 
 
+fun boirePotion(nom_perso: String,PV:Int,PV_Max:Int,Recup_PV:Int): String {
+    var exPV = PV_Max
+    var pv = PV
+    var boire = Recup_PV + PV
+    if(boire > exPV){
+        pv = PV_Max
+    } else {
+        pv = boire
+    }
+    var total_recup = Recup_PV
+    if(PV + total_recup> PV_Max){
+        total_recup = PV_Max - PV
+    }
+    return "$nom_perso avait $PV PV il a récupéré $total_recup PV il a maintenant $pv PV"
+}
+
 fun main() {
     (calculDefenseTotal(8,9,3))
     lanceDe(1,6)
     calculDegatArme(2,3,7,5,8)
     println(attaque(50,7,"Ratatac","Pikachu",20))
+    println(boirePotion("Inoxtag",70,100,50))
 }
