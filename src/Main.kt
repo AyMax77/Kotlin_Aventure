@@ -37,9 +37,9 @@ fun boirePotion(nom_perso: String,PV:Int,PV_Max:Int,Recup_PV:Int): String {
     var exPV = PV_Max
     var pv = PV
     var boire = Recup_PV + PV
-    if(boire > exPV){
+    if(boire > exPV) {
         pv = PV_Max
-    } else {
+    } else{
         pv = boire
     }
     var total_recup = Recup_PV
@@ -59,7 +59,9 @@ fun bouleDeFeu(caster:String,cible: String,scoreattaque:Int,scoredefense:Int,PV:
 
 
 fun missileMagique(caster: String,cible: String,scoreattaque: Int,scoredefense: Int){
-
+    var degat = lanceDe(nombre_de = 1, nombre_face = 6)
+    var nombre_misile = scoreattaque/2
+    for()
 }
 
 
@@ -69,6 +71,6 @@ fun main() {
     lanceDe(1,6)
     calculDegatArme(2,3,7,5,8)
     println(attaque(50,7,"Ratatac","Pikachu",20))
-    println(boirePotion("Inoxtag",70,100,50))
+    println(boirePotion("Inoxtag",70,150,50))
     println(bouleDeFeu("Johan","Yaẽl",10,6,90))
 }
