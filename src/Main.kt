@@ -49,10 +49,26 @@ fun boirePotion(nom_perso: String,PV:Int,PV_Max:Int,Recup_PV:Int): String {
     return "$nom_perso avait $PV PV il a récupéré $total_recup PV il a maintenant $pv PV"
 }
 
+fun bouleDeFeu(caster:String,cible: String,scoreattaque:Int,scoredefense:Int,PV: Int) : String{
+    var degat = lanceDe(nombre_de = scoreattaque/3, nombre_face = 6)
+    degat = degat - scoredefense
+    var hp = PV
+    if (hp < 0){ error("stop")}
+    return "$caster lance une boule de feu et inflige $degat points de dégats à $cible"
+}
+
+
+fun missileMagique(caster: String,cible: String,scoreattaque: Int,scoredefense: Int){
+
+}
+
+
+
 fun main() {
     (calculDefenseTotal(8,9,3))
     lanceDe(1,6)
     calculDegatArme(2,3,7,5,8)
     println(attaque(50,7,"Ratatac","Pikachu",20))
     println(boirePotion("Inoxtag",70,100,50))
+    println(bouleDeFeu("Johan","Yaẽl",10,6,90))
 }
