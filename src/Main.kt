@@ -23,8 +23,13 @@ fun calculDegatArme(nombreDes: Int, nombreFaces: Int, bonusQualite: Int, seuilCr
     return degat
 }
 
-fun attaque(PV:Int,defense: Int,nom_attaquant: String,nom_cible: String){
-
+fun attaque(PV:Int,defense: Int,nom_attaquant: String,nom_cible: String,atktotal:Int):String{
+    var attak = atktotal-defense
+    if(attak<0){
+        attak = 0
+    }
+    var hp = PV - attak
+    return "$nom_attaquant attaque $nom_cible pour $attak points de dégâts\n"
 }
 
 
@@ -32,4 +37,5 @@ fun main() {
     (calculDefenseTotal(8,9,3))
     lanceDe(1,6)
     calculDegatArme(2,3,7,5,8)
+    println(attaque(50,7,"Ratatac","Pikachu",20))
 }
